@@ -1,0 +1,28 @@
+{
+  "name": "@unrepos/rest",
+  "version": "0.1.0",
+  "description": "Agnostic and isomorphic REST repository implementation, with custom support for schema validation, HTTP library and serialization",
+  "keywords": [
+    "REST",
+    "repository",
+    "service",
+    "isomorphic"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ggondim/unrepos.git"
+  },
+  "author": {
+    "name": "Gustavo Gondim",
+    "url": "https://github.com/ggondim"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ggondim/unrepos/issues"
+  },
+  "homepage": "https://github.com/ggondim/unrepos#readme"
+}
