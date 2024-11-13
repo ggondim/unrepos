@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "aaron-bond.better-comments",
+    "usernamehw.errorlens",
+    "wayou.vscode-todo-highlight",
+    "gruntfuggly.todo-tree",
+    "shardulm94.trailing-spaces",
+    "visualstudioexptteam.vscodeintellicode",
+    "oouo-diogo-perdigao.docthis",
+    "mikestead.dotenv",
+    "dbaeumer.vscode-eslint",
+    "orkhanjafarovr.vscode-here-and-now",
+    "xabikos.javascriptsnippets",
+    "cmstead.js-codeformer",
+    "prosser.json-schema-2020-validation",
+    "eg2.vscode-npm-script",
+    "abhijoybasak.npm-audit",
+    "christian-kohler.npm-intellisense",
+    "mskelton.npm-outdated"
+  ]
+}

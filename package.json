@@ -1,0 +1,70 @@
+{
+  "name": "unrepos",
+  "version": "1.0.0",
+  "description": "Universal CRUD Repository types, specially used by CRUD API Spec implementations.",
+  "keywords": [
+    "CRUD",
+    "Repository",
+    "CRUD API",
+    "CRUD API Spec"
+  ],
+  "readme": "README.md",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist/",
+    "docs/",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "npm run create-index; npm run ts:build",
+    "build:production": "npm run create-index; npm run ts:build:production",
+    "create-index": "npx ctix@0.6.0 single -p ./tsconfig.json -v -m -r -x --useUpperFirst",
+    "prepare": "husky install",
+    "prepublish": "npm run build",
+    "release-rc": "npm run release -- --prerelease rc",
+    "release": "npx standard-version",
+    "hook:commit-msg": "npx --no -- commitlint --edit $1",
+    "hook:pre-commit": "npm run lint; npm run ts:lint",
+    "lint": "eslint ./src/*.{ts,js} --format stylish",
+    "ts:lint": "tsc --noEmit",
+    "ts:build": "rimraf dist; mkdir dist; tsc",
+    "ts:build:production": "rimraf dist; mkdir dist; tsc -p ./tsconfig.production.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ggondim/uuid.git"
+  },
+  "author": {
+    "email": "gustavospgondim@gmail.com",
+    "name": "Gustavo Gondim",
+    "url": "https://github.com/ggondim"
+  },
+  "license": "LicenseRef-LICENSE",
+  "licenseRef": "docs/LICENSE",
+  "bugs": {
+    "url": "https://github.com/ggondim/uuid/issues"
+  },
+  "homepage": "https://github.com/ggondim/uuid#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@types/node": "^22.9.0",
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
+    "ctix": "^0.6.0",
+    "eslint": "^9.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^18.0.0",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-import": "^2.31.0",
+    "husky": "^9.1.6",
+    "rimraf": "^6.0.1",
+    "standard-version": "^9.5.0",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@uuid-ts/uuid": "^1.0.0",
+    "ts-advanced-types": "^1.1.1"
+  }
+}
